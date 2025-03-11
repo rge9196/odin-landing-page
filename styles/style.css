@@ -1,130 +1,211 @@
 /* Reset Default Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body - Adds Padding for a Balanced Layout */
-  body {
-    background: white; /* Keep background white */
-    color: black; /* Text stays readable */
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 0 10vw; /* Adds left & right spacing */
-  }
-  
-  /* Navigation Bar */
-  .navbar {
-    padding: 15px 0;
-  }
-  
-  .navbar nav {
-    display: flex;
-    justify-content: space-between; /* Smiley on left, links on right */
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-links li a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: 80vh; /* Keeps hero section balanced */
-    justify-content: center;
-  }
-  
-  /* Large Responsive Hero Title */
-  .hero h1 {
-    font-size: clamp(36px, 5vw, 48px); /* Responsive text size */
-    text-wrap: balance;
-    max-width: 90%;
-  }
-  
-  /* Hero Paragraph */
-  .hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin-top: 10px;
-  }
-  
-  /* Button */
-  .btn {
-    background: darkmagenta;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-  }
-  
-  /* Cards Section */
-  .cards-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  
-  .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    flex: 1 1 250px;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Third Section (Simple Text) */
-  .text-section {
-    text-align: center;
-    padding: 50px 0;
-    font-size: 1.2rem;
-  }
-  
-  /* Fourth Section (Two Columns) */
-  .two-columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 0;
-  }
-  
-  .left-column {
-    flex: 1;
-  }
-  
-  .right-column {
-    flex: 1;
-    text-align: right;
-  }
-  
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #eee;
-    margin-top: auto;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body - Adds Padding for a Balanced Layout */
+body {
+  background: #1f2937; /* Keep background white */
+  color: black; /* Text stays readable */
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw; /* Adds left & right spacing */
+}
+
+/* Navigation Bar */
+.navbar {
+  padding: 15px 0;
+  color: #f9faf8;
+  font-size: 24px;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between; /* Smiley on left, links on right */
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  font-size: 18px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  margin: 100px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.heroLeft,
+.heroRight {
+  flex: 1 1 350px;
+}
+
+.heroLeft h1 {
+  font-size: 48px;
+  color: #f9faf8;
+}
+
+.heroLeft p {
+  font-size: 18px;
+  color: #e5e7eb;
+  line-height: 120%;
+  margin: 10px 0px;
+}
+
+.heroLeft .btn {
+  display: inline-block; /* Makes it behave like a button */
+  background-color: #3882f6; /* Nice blue */
+  color: white; /* White text */
+  padding: 5px 24px; /* Top-Bottom | Left-Right padding */
+  font-size: 16px; /* Text size */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.heroRight {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+}
+
+.heroRight img {
+  width: 100%; /* Makes it fill the available width */
+  max-width: 250px; /* Ensures a max size */
+  height: auto; /* Keeps aspect ratio */
+  object-fit: cover; /* Ensures it fills the box without distortion */
+  border-radius: 10px; /* Optional: Rounds corners for a softer look */
+}
+
+/* Cards Section */
+
+.cards-section {
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.cards-section h2 {
+  font-size: 36px;
+  text-align: center;
+  color: #1f2937;
+  font-weight: 900;
+  padding: 30px;
+}
+
+/* Cards Container - Flexbox to align cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between cards */
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  padding: 20px;
+}
+
+/* Each Card - Column layout */
+.card {
+  max-width: 150px;
+}
+
+/* Image Placeholder - Perfect Square */
+.card-image {
+  width: 150px;
+  height: 150px;
+  background-color: lightgray; /* Placeholder color */
+  border-radius: 10px; /* Rounds only the top corners */
+  border: 3px solid #3882f6; /* Blue border */
+}
+
+/* Text Section */
+.card-text {
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+}
+/* Third Section (Simple Text) */
+.text-section {
+  background-color: #e5e7eb;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 26px;
+  color: #1f2937;
+  padding: 100px 200px;
+}
+
+.text-section .send-right {
+  font-weight: bold;
+  text-align: end;
+}
+
+/* Fourth Section (Two Columns) */
+
+.fourth-section {
+  background-color: white;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center; /* Center the section */
+}
+
+/* Inner Box (Blue Background) */
+.inner-blue {
+  background-color: #3882f6;
+  color: white;
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between; /* Creates space between text & button */
+  border-radius: 8px;
+  padding: 25px 100px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Left Column - Text */
+.left-column {
+  flex: 1; /* Takes up most space */
+}
+
+/* Right Column - Button (Fix: Align to Right) */
+.right-column {
+  display: flex;
+  align-items: center; /* Center button vertically */
+  justify-content: flex-end; /* Push button to the right */
+  flex: 1; /* Make sure it takes up space */
+}
+
+/* Button Styling */
+.btn-2 {
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  padding: 10px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-2:hover {
+  background-color: white;
+  color: #3882f6;
+}
+
+/* Footer Section */
+.footer {
+  color: #3882f6;
+  text-align: center;
+  padding: 20px;
+}
